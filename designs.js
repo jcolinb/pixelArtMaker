@@ -9,16 +9,22 @@ $('#colorPicker').on('input',function (event) {
   gridStuff.color = $(event.target).val();
 });
 // Select size input
-$('#inputWidth').on('change',function (event) {
-  gridStuff.cols = $(event.target).val();
-  makeGrid(cols,rows);
+$('#submit').on('click',function () {
+  gridStuff.cols = $('#inputWidth').val();
+  gridStuff.rows = $('#inputHeight').val();
+  $('#pixelCanvas').children().remove();
+  makeGrid(gridStuff.cols,gridStuff.rows);
 });
-$('#inputHeight').on('change',function (event) {
-  gridStuff.rows = $(event.target).val();
-  makeGrid(cols,rows);
-});
+
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid(c,r) {
-
+  for (x=1;x<=r;x++) {
+    $('#pixelCanvas').append(
+      "<tr class='xCord'></tr>"
+    );
+  }
+  for (x=1;x<=c;x++) {
+    $('.xCord').append("<td class='ycord'></td>");
+  }
 }
