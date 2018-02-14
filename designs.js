@@ -12,6 +12,7 @@ $('#colorPicker').on('input',function (event) {
 $('#submit').on('click',function () {
   gridStuff.cols = $('#inputWidth').val();
   gridStuff.rows = $('#inputHeight').val();
+  $('#workspace').html("<table id='pixelCanvas'></table>\n<script src='designs.js'></script>");
   $('#pixelCanvas').children().remove();
   makeGrid(gridStuff.cols,gridStuff.rows);
 });
@@ -29,7 +30,7 @@ function makeGrid(c,r) {
   }
 }
 
-$('table#pixelCanvas').on('click','td',function (event) {
+$('#workspace#pixelCanvas').on('click','td',function (event) {
   $(event.target).css('background-color',gridStuff.color);
   console.log(event.target);
 });

@@ -1,9 +1,10 @@
 body {
     text-align: center;
+    background-color: #505250;
 }
 
 h1 {
-    font-family: Monoton;
+    font-family: sans;
     font-size: 70px;
     margin: 0.2em;
 }
@@ -19,7 +20,7 @@ h2:first-of-type {
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 1px solid #ffff00;
 }
 
 table {
