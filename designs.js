@@ -1,6 +1,6 @@
 // Select color input
 var gridStuff = {
-  color: '#ffffff',
+  color: '#000000',
   cols: 1,
   rows: 1
 };
@@ -25,6 +25,11 @@ function makeGrid(c,r) {
     );
   }
   for (x=1;x<=c;x++) {
-    $('.xCord').append("<td class='ycord'></td>");
+    $('.xCord').append("<td class='yCord'></td>");
   }
 }
+
+$('table#pixelCanvas').on('click','td',function (event) {
+  $(event.target).css('background-color',gridStuff.color);
+  console.log(event.target);
+});
