@@ -28,8 +28,10 @@ function makeGrid(c,r) {
     $('.xCord').append("<td class='yCord'></td>");
   }
 }
+$('table#pixelCanvas').on('click',function (event) {  
+  $(event.target).on('mouseover','td',function (event) {
 
-$('table#pixelCanvas').on('click','td',function (event) {
-  $(event.target).css('background-color',gridStuff.color);
-  console.log(event.target);
+    $(event.target).css('background-color',gridStuff.color);
+
 });
+});  
