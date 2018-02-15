@@ -10,20 +10,37 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
+<div id="control">
 <div id="workspace">
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" max="30" value="1"><br><br>
         Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <button type="button" id="submit">make canvas</button>
+        <input type="number" id="inputWidth" name="width" min="1" max="30" value="1">
     </form>
-
-    <h2>Pick A Color</h2>
+</div>
+<div id="button">
+    <button type="button" id="submit">make canvas</button>
+</div>
+<div id="color">
     <input type="color" id="colorPicker">
 </div>
-        <script src="designs.js"></script>
+</div>
+<div id="diplay">
+<div id="marquee">
+    <h1><strike><pre>
+P  A  M
+I  R  A 
+X  T  K  
+E     E   
+L     R    
+</pre></strike></h1>
+</div>
+<div id="grid">
+<table id='pixelCanvas'></table>
+</div>
+</div>
+<script src="designs.js"></script>
 </body>
 </html>

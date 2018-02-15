@@ -12,9 +12,12 @@ $('#colorPicker').on('input',function (event) {
 $('#submit').on('click',function () {
   gridStuff.cols = $('#inputWidth').val();
   gridStuff.rows = $('#inputHeight').val();
-  $('#workspace').html("<table id='pixelCanvas'></table>\n<script src='designs.js'></script>");
-  $('#pixelCanvas').children().remove();
-  makeGrid(gridStuff.cols,gridStuff.rows);
+  if (gridStuff.cols <=30 && gridStuff.rows <=30) {
+    $('#marquee').hide();
+    $('#pixelCanvas').children().remove();
+    $('button').text('start over');
+    makeGrid(gridStuff.cols,gridStuff.rows);
+}
 });
 
 // When size is submitted by the user, call makeGrid()
@@ -30,7 +33,7 @@ function makeGrid(c,r) {
   }
 }
 
-$('#workspace#pixelCanvas').on('click','td',function (event) {
-  $(event.target).css('background-color',gridStuff.color);
-  console.log(event.target);
-});
+  $('#pixelCanvas').on('click','td',function (event) {
+    $(event.target).css('background-color',gridStuff.color);
+    console.log(event.target);
+  });
