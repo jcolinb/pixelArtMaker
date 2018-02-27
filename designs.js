@@ -31,11 +31,12 @@ function makeGrid(c,r) {
 
 var paint = false;
 
-$('#pixelCanvas').mousedown(function () {
+$('#pixelCanvas').mousedown(function (event) {
+  event.preventDefault();
   paint = true;
 });
 
-$('#pixelCanvas').mouseup(function () {
+$('body').mouseup(function () {
   paint = false;
 });
 
