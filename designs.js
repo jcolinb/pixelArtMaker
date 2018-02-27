@@ -34,7 +34,19 @@ function makeGrid(c,r) {
   }
 }
 
-$('table#pixelCanvas').on('click','td',function (event) {
-  $(event.target).css('background-color',gridStuff.color);
-  console.log(event.target);
+var paint = false;
+
+$('#pixelCanvas').mousedown(function (event) {
+  event.preventDefault();
+  paint = true;
+});
+
+$('body').mouseup(function () {
+  paint = false;
+});
+
+$('#pixelCanvas').mouseover('td',function (event) {
+  if (paint) {
+    $(event.target).css('background-color',gridStuff.color);
+  }
 });
