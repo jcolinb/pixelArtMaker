@@ -28,10 +28,19 @@ function makeGrid(c,r) {
     $('.xCord').append("<td class='yCord'></td>");
   }
 }
-$('table#pixelCanvas').on('click',function (event) {  
-  $(event.target).on('mouseover','td',function (event) {
 
-    $(event.target).css('background-color',gridStuff.color);
+var paint = false;
 
+$('#pixelCanvas').mousedown(function () {
+  paint = true;
 });
-});  
+
+$('#pixelCanvas').mouseup(function () {
+  paint = false;
+});
+
+$('#pixelCanvas').mouseover('td',function (event) {
+  if (paint) {
+    $(event.target).css('background-color',gridStuff.color);
+  }
+});
