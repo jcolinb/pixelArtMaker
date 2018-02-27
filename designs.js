@@ -9,6 +9,7 @@ $('#colorPicker').on('input',function (event) {
   gridStuff.color = $(event.target).val();
 });
 // Select size input
+
 $('#submit').on('click',function () {
   gridStuff.cols = $('#inputWidth').val();
   gridStuff.rows = $('#inputHeight').val();
@@ -33,7 +34,19 @@ function makeGrid(c,r) {
   }
 }
 
-  $('#pixelCanvas').on('click','td',function (event) {
+var paint = false;
+
+$('#pixelCanvas').mousedown(function (event) {
+  event.preventDefault();
+  paint = true;
+});
+
+$('body').mouseup(function () {
+  paint = false;
+});
+
+$('#pixelCanvas').mouseover('td',function (event) {
+  if (paint) {
     $(event.target).css('background-color',gridStuff.color);
-    console.log(event.target);
-  });
+  }
+});
