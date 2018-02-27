@@ -1,9 +1,15 @@
 body {
     text-align: center;
+    background-color: #505250;
+}
+
+div {
+    margin: 20px;
+    color: #ffff00;
+    font-family: "Arial";
 }
 
 h1 {
-    font-family: Monoton;
     font-size: 70px;
     margin: 0.2em;
 }
@@ -19,12 +25,12 @@ h2:first-of-type {
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 1px solid #ffff00;
 }
 
 table {
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 tr {
@@ -43,4 +49,45 @@ input[type=number] {
 
 button {
     background-color: #ffff00;
+}
+
+#color {
+
+    display: block;
+}
+
+#button {
+
+    display: block;
+}
+
+#grid {
+    margin: 50px auto;
+}
+
+#workspace {
+    
+}
+
+#control {
+    width: 20%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+pre {
+    font-family: mono;
+}
+
+#marquee {
+    margin-top: 50px;
+    margin-right: 100px;
+    text-align: right;
+}
+
+#display {
+    display: block;
+    margin: 100px auto;
 }

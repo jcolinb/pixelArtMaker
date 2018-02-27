@@ -9,11 +9,16 @@ $('#colorPicker').on('input',function (event) {
   gridStuff.color = $(event.target).val();
 });
 // Select size input
+
 $('#submit').on('click',function () {
   gridStuff.cols = $('#inputWidth').val();
   gridStuff.rows = $('#inputHeight').val();
-  $('#pixelCanvas').children().remove();
-  makeGrid(gridStuff.cols,gridStuff.rows);
+  if (gridStuff.cols <=30 && gridStuff.rows <=30) {
+    $('#marquee').hide();
+    $('#pixelCanvas').children().remove();
+    $('button').text('start over');
+    makeGrid(gridStuff.cols,gridStuff.rows);
+}
 });
 
 // When size is submitted by the user, call makeGrid()
