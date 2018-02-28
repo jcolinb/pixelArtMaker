@@ -2,44 +2,35 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
 <script
      src="https://code.jquery.com/jquery-3.3.1.min.js"
      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
      crossorigin="anonymous"></script>
 </head>
+
 <body>
-<div id="control">
-<div id="workspace">
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" max="30" value="1"><br><br>
-        Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" max="30" value="1">
-    </form>
-</div>
-<div id="button">
-    <button type="button" id="submit">make canvas</button>
-</div>
-<div id="color">
-    <input type="color" id="colorPicker">
-</div>
-</div>
 <div id="diplay">
-<div id="marquee">
-    <h1><strike><pre>
-P  A  M
-I  R  A 
-X  T  K  
-E     E   
-L     R    
-</pre></strike></h1>
+  <div id="marquee">
+    <h1>pixel art maker</h1>
+      <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="50" max="100" value="50"><br><br>
+        Grid Width:
+        <input type="number" id="inputWidth" name="width" min="50" max="100" value="50">
+      </form>
+  </div>
+  <div id="grid">
+    <table id="pixelCanvas"></table>
+  </div>
 </div>
-<div id="grid">
-<table id='pixelCanvas'></table>
-</div>
+<div id="control">
+  <div id="color">
+    <input type="color" id="colorPicker">
+  </div>
+  <div id="button">
+    <button type="button" id="submit">make canvas</button>
+  </div>
 </div>
 <script src="designs.js"></script>
 </body>
