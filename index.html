@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
 <script
      src="https://code.jquery.com/jquery-3.3.1.min.js"
      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
      crossorigin="anonymous"></script>
 </head>
+<<<<<<< HEAD
 <body>
 <div id="control">
 <div id="workspace">
@@ -40,6 +40,31 @@ L     R
 <div id="grid">
 <table id='pixelCanvas'></table>
 </div>
+=======
+
+<body>
+<div id="diplay">
+  <div id="marquee">
+    <h1>pixel art maker</h1>
+      <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="50" max="100" value="50"><br><br>
+        Grid Width:
+        <input type="number" id="inputWidth" name="width" min="50" max="100" value="50">
+      </form>
+  </div>
+  <div id="grid">
+    <table id="pixelCanvas"></table>
+  </div>
+</div>
+<div id="control">
+  <div id="color">
+    <input type="color" id="colorPicker">
+  </div>
+  <div id="button">
+    <button type="button" id="submit">make canvas</button>
+  </div>
+>>>>>>> master
 </div>
 <script src="designs.js"></script>
 </body>

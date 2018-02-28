@@ -1,17 +1,27 @@
 body {
     text-align: center;
+<<<<<<< HEAD
     background-color: #505250;
+=======
+    background-color: #acacac;
+>>>>>>> master
 }
 
 div {
     margin: 20px;
+<<<<<<< HEAD
     color: #ffff00;
     font-family: "Arial";
+=======
+    color: #ffffff;
+    font-family: monospace;
+>>>>>>> master
 }
 
 h1 {
     font-size: 70px;
     margin: 0.2em;
+    margin-bottom: 50px;
 }
 
 h2 {
@@ -22,33 +32,71 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
-table,
 tr,
 td {
+<<<<<<< HEAD
     border: 1px solid #ffff00;
 }
 
 table {
     border-collapse: collapse;
     margin: 20px auto;
+=======
+    height: 2px;
+    width: 2px;
 }
 
-tr {
-    height: 20px;
-    width: 20px;
-}
-
-td {
-    height: 20px;
-    width: 20px;
+table {
+/*    border: 2px solid #000000; */ 
+    border-collapse: collapse; 
+>>>>>>> master
 }
 
 input[type=number] {
     width: 6em;
+    display: inline-block;
 }
 
 button {
-    background-color: #ffff00;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+#button {
+    display: inline-block;
+}
+
+#color {
+
+    display: inline-block;
+}
+
+#control {
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#display {
+    width: 100%;
+    height: 90%;
+    display: block;
+}
+
+#grid {
+    margin: 100px auto 5px;
+    display: inline-block;
+    background-color: #ffffff;
+}
+
+#marquee {
+    margin: 100px auto 5px;
+    text-align: center;
+}
+
+.showGrid {
+    border: 6px #acacac;
+    border-style: outset;
 }
 
 #color {
