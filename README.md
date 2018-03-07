@@ -1,16 +1,11 @@
-# Pixel Art Maker Project
+# Point 'N' Paint
 
-## Table of Contents
+Choose your canvas size. (maximum 100 X 150)
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+Press Start.
 
-## Instructions
+Choose your brush color.
 
-To get started, open `designs.js` and start building out the app's functionality.
+Hold down the left mouse button to draw.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Press Start Again to clear or resize and clear canvas.
