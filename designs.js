@@ -5,9 +5,9 @@ var gridStuff = {
   rows: 1
 };
 
-pixelCanvas = $('#pixelCanvas')
-
-$('#colorPicker').on('input',function (event) {
+var pixelCanvas = $('#pixelCanvas');
+var colorPicker = $('#colorPicker');
+colorPicker.on('input',function (event) {
   gridStuff.color = $(event.target).val();
 });
 // Select size input
@@ -15,7 +15,7 @@ $('#colorPicker').on('input',function (event) {
 $('#submit').on('click',function () {
   gridStuff.cols = $('#inputWidth').val();
   gridStuff.rows = $('#inputHeight').val();
-  if (gridStuff.cols <=100 && gridStuff.rows <=100) {
+  if (gridStuff.cols <=150 && gridStuff.rows <=150) {
     $('#marquee').hide();
     pixelCanvas.children().remove();
     $('#submit').text('start over');

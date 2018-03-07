@@ -10,26 +10,26 @@
 </head>
 
 <body>
-<div id="diplay">
-  <div id="marquee">
-    <h1>pixel art maker</h1>
-      <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="50" max="100" value="50"><br><br>
-        Grid Width:
-        <input type="number" id="inputWidth" name="width" min="50" max="100" value="50">
-      </form>
-  </div>
-  <div id="grid">
-    <table id="pixelCanvas"></table>
-  </div>
-</div>
 <div id="control">
+  <form id="sizePicker">
+    Height:
+    <input type="number" id="inputHeight" name="height" min="50" max="100" value="100">
+    Width:
+    <input type="number" id="inputWidth" name="width" min="50" max="150" value="100">
+  </form>
   <div id="color">
     <input type="color" id="colorPicker">
   </div>
   <div id="button">
-    <button type="button" id="submit">make canvas</button>
+    <button type="button" id="submit">start</button>
+  </div>
+</div>
+<div id="display">
+  <div id="marquee">
+    <img src="pointNpaint.png">
+  </div>
+  <div id="grid">
+    <table id="pixelCanvas"></table>
   </div>
 </div>
 <script src="designs.js"></script>
